@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symphony Keys</title>
+    <link rel="stylesheet" href="./CSS/Contact.css">
+    <link rel="icon" href="./Images/98176d8f-0cba-4f68-b981-fcd33d23a39f.jpg">
+</head>
+<body>
+ <!--Navigation Bar-->
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="Lessons.html">Lessons</a>
+        <a href="Contact.html">Contact</a>
+         <!--Dropdown Navigation-->
+        <div class="dropdown">
+          <button class="dropbtn">About<i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content">
+            <a href="Prices.html">Prices</a>
+            <a href="Virtual.html">Virtual Piano</a>
+            <a href="Registration.html">Registration</a>
+          </div>
+        </div>
+        
+    </div>
+<!--Content under Navigation Bar-->
+    <main>
+        <section class="response">
+            <h1>Successfully Submitted</h1>
+            <p><strong>Name:</strong> <span id="responseName"></span></p>
+            <p><strong>Email:</strong> <span id="responseEmail"></span></p>
+            <p><strong>Subject:</strong> <span id="responseSubject"></span></p>
+            <p><strong>Message:</strong> <span id="responseMessage"></span></p>
+        </section>
+    </main>
+    <script>
+        // retrieved value from localStorage is parsed using JSON.parse() to convert the JSON string back into a JS object
+        const formData = JSON.parse(localStorage.getItem('formData')); 
+        if (formData) {                                                        //checks if the formData object exists
+            document.getElementById('responseName').textContent = formData.name;     //populate the HTML elements with the corresponding form data.
+            document.getElementById('responseEmail').textContent = formData.email;
+            document.getElementById('responseSubject').textContent = formData.subject;
+            document.getElementById('responseMessage').textContent = formData.message;
+        }
+    </script>
+</body>
+    
+</body>
+</html>

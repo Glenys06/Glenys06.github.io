@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symphony Keys</title>
+    <link rel="stylesheet" href="./CSS/Contact.css">
+    <link rel="icon" href="./Images/98176d8f-0cba-4f68-b981-fcd33d23a39f.jpg">
+</head>
+<body>
+<!--Navigation Bar-->
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="Lessons.html">Lessons</a>
+        <a href="Contact.html">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn">About<i class="fa fa-caret-down"></i></button>
+           <!--Dropdown Navigation-->
+          <div class="dropdown-content">
+            <a href="Prices.html">Prices</a>
+            <a href="Virtual.html">Virtual Piano</a>
+            <a href="Registration.html">Registration</a>
+          </div>
+        </div>
+        
+    </div>
+<!--Content under Navigation Bar-->
+
+<!--Form-->
+    <main>
+        <section class="contact-form">
+            <h1>Contact Us</h1>
+            <p>Have a question or need assistance? Please fill out the form below, and we'll get back to you as soon as possible.</p>
+
+            <form id="contactForm" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <!--Hyperlink-->
+            <p>For the latest music news, you can visit <a href="https://pitchfork.com/" target="_blank">pitchfork.com</a>.</p>
+        </section>
+    </main>
+
+   
+
+    <script src="./Javascript/Contact.js"></script>
+</body>
+</html>
